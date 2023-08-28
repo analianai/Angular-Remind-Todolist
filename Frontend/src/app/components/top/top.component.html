@@ -1,0 +1,47 @@
+<div class="container-fluid">
+ <div class="p-2 navFundo d-flex justify-content-between align-items-center">
+    <!-- logo -->
+    <a class="navbar-brand" routerLink="/board">
+        <img class="imgFundo" src="../../../assets/rm410-11.png">
+    </a>
+    <!-- Menu  -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <p class="text-white px-3">
+            {{listItemsUsers.name}}
+        </p>
+        <div class="btn-group">
+            <!-- Imagem menu -->
+            <button type="button" class="btn btnMenu d-flex justify-content-between align-items-center"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="pi pi-align-justify"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end mt-6">
+                <li>
+                    <button class="btnMenuItem pt-1" role="button" routerLink="/board">
+                        <i class="pi pi-file-edit" style="font-size: 15px"> Tarefas</i>
+                    </button>
+                </li>
+                <li>
+                    <button class="btnMenuItem pt-1" role="button" routerLink="/perfil">
+                        <i class="pi pi-user" style="font-size: 15px"> Perfil</i>
+                    </button>
+                </li>
+                <li>
+                    <button class="btnMenuItem pt-1" role="button" routerLink="/sobre">
+                        <i class="pi pi-users" style="font-size: 15px"> Sobre</i>
+                    </button>
+                </li>
+                <li>
+                    <button class="btnMenuItem pt-1 pb-1" role="button" (click)="onLogout()">
+                        <i class="pi pi-sign-out" style="font-size: 15px"> Sair</i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            
+        </button>
+    </nav>
+  </div>
+</div>

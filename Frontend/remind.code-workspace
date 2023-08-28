@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"uri": "vscode-vfs://github/analianai/remind"
+		},
+		{
+			"uri": "vscode-vfs://github/analianai/remind/FrontEnd"
+		}
+	],
+	"settings": {}
+}

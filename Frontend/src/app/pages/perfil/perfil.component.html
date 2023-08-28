@@ -1,0 +1,50 @@
+<div class="container-fluid fundoPerfil">
+  <app-top></app-top>
+    <div class="container fundoContainer px-2 p-3">
+        <div class="row d-flex justify-content-between">
+          <div class="col-8 text-left col-md-4 col-sm-4 ms-4">
+            <h5 class="fs-3"><b><i class="pi pi-user" ></i> Perfil</b> </h5>
+          </div>
+          <div class="col-2 col-md-4 d-grid gap-2 d-md-flex justify-content-md-end">
+            <a class="btn-close p-3" routerLink="/board"></a>
+          </div>
+        </div> 
+          <div class="row mt-4 fs-4 ms-4">
+            <div class="col-lg-5 col-md-4 col-sm-4">
+              <p><b>Nome: </b> {{listItemsUsers.name}}</p>
+              <p><b>Email: </b> {{listItemsUsers.email}}</p>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-3">
+            <div class="text-center d-flex justify-content-center align-items-center">
+                    <button 
+                    class="btn btn-outline-primary btn-lg p-5 mx-auto w-75"
+                    (click)="editUser(listItemsUsers)" 
+                    data-bs-target="#exampleModalToggle5" 
+                    data-bs-toggle="modal"
+                    >
+                      <i class="pi pi-lock" style="font-size: 40px"></i>
+                      <p>Alterar Senha</p>
+                    </button>  
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 mt-3">
+            <div class="text-center d-flex justify-content-center">
+              <button 
+                    class="btn btn-outline-success btn-lg p-5 mx-auto w-75" 
+                    (click)="editUserPerfil(listItemsUsers)" 
+                    data-bs-target="#exampleModalToggle3" 
+                    data-bs-toggle="modal"
+                    >
+                    <i class="pi pi-user" style="font-size: 40px"></i>
+                    <p>Atualizar Perfil </p>               
+              </button>
+          </div>
+        </div>
+      </div>
+</div>
+        <app-modal-user (loadTask)="loadUser()" [user]="listItemsUsers" ></app-modal-user>
+
+        <div class="text-center p-2 text-white fixed-bottom footerFundo">
+          <p>© 2023 Copyright: <a class="text-white" href="www.remindapp.com.br">re.mind</a></p>
+        </div>

@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+button,
+label,
+input,
+textarea,
+div {
+  font-family: Inter;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+}
+body{
+  background-color: #EFEBEB;
+  overflow-x: hidden;
+}

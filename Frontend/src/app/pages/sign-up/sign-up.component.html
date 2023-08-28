@@ -1,0 +1,68 @@
+<div class="container-fluid fundoIn">
+  <div
+    class="row d-flex justify-content-evenly align-items-lg-center align-items-md-start justify-content-sm-center align-items-center align-items-sm-center gx-0">
+    <div class="col-lg-4 col-md-3 col-sm-4">
+      <div class="logo">
+        <img src="../../../assets/rm410-11.png" alt="">
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 esferaLogin d-flex justify-content-center align-items-center align-self-sm-center">
+      <div class="d-grid gap-2">
+        <div class="fonte text-center">
+          <h1>Cadastro</h1>
+        </div>
+        <form (ngSubmit)="onSubmit()" id="arealogin">
+
+          <div class="mb-0 input-group" >
+            <div class="container-password">
+              <label for="exampleInputName1" class="form-label"></label>
+              <input type="text" #name="ngModel" class="form-control" id="exampleInputName1" aria-describedby="emailHelp"
+                name="name" [(ngModel)]="user.name" placeholder="Nome" required>
+            </div>
+          </div>
+          <div *ngIf="name.invalid" class=" w-75 text-center"></div>
+
+          <div class="mb-0 input-group">
+            <div class="container-password">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input type="email" #email="ngModel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                name="email" [(ngModel)]="user.email" placeholder="email@email.com" required ngModel [email]="true">
+            </div>
+          </div>
+          <div *ngIf="email.invalid" class="alert w-75 text-center "></div>
+
+          <div class="mb-0 input-group">
+            <div class="container-password">
+              <label for="exampleInputPassword1" class="form-label"></label>
+              <input #senha="ngModel" class="form-control" id="exampleInputPassword1" name="password" [(ngModel)]="user.password"
+                placeholder="Senha" required [type]="showPassword ? 'text' : 'password'">
+
+              <button type="button" class="justify-content-center password-toggle" (click)="toggleShowPassword()">
+                <i [ngClass]="showPassword ? 'pi pi-eye-slash' : 'pi pi-eye'"></i>
+              </button>
+            </div>
+          </div>
+          <div *ngIf="senha.invalid" class=" w-75 text-center"></div>
+
+          <div class="d-flex justify-content-around justify-content-sm-center align-items-center">
+     
+            <button type="submit" 
+                    [disabled]="email.invalid || senha.invalid || name.invalid"
+                    class="btn btn-primary btnbutton">
+                    Cadastrar
+           </button>
+            <button routerLink="/sign-in" 
+                    class="btn btn-primary btnbutton">
+                    Login
+          </button>
+          </div>
+      
+        </form>
+      </div>
+    </div>
+    <div
+      class="d-flex justify-content-center justify-content-sm-center  align-items-center align-items-sm-center fixed-top text-center">
+      <app-alert [message]="message" [showAlert]="showAlert" [error]="error"></app-alert>
+    </div>
+  </div>
+</div>

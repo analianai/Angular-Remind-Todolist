@@ -1,0 +1,64 @@
+.imgContainer{
+    width: 28px;
+    padding-bottom: 8px;
+}
+.imgContainerHome {
+    width: 35px;
+    padding-bottom: 8px;
+}
+.corTask{
+    background: #F9F5F5;
+}
+.areaModal, .inputModal{
+    border-radius: 5px;
+    background: #F9F5F5;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    width: 100%;
+}
+.areaModal{
+    max-height: 100px;
+    height: 100px;
+}
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    z-index: 99;
+}
+.btnContainer{
+    border: 0;
+}
+.btnContainerImg{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+.btnContainerImg:hover{
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+}
+.form-select{
+    background-color: #F9F5F5;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.btnIcon {
+    border: 0;
+}
+.btnIcon:hover {
+    border: 0;
+    color: #0275d8;
+}
+.btncor1 {
+    background-color: rgba(248, 177, 194, 0.50) !important;
+   
+}
+.btncor2 {
+    background-color: rgba(255, 244, 141, .8) !important;
+
+}
+.btncor3 {
+    background-color: rgba(124, 252, 128, .6) !important;
+  
+}
+.btncorDelete {
+    background-color: #F9F5F5 !important;
+}

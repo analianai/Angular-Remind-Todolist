@@ -1,0 +1,61 @@
+<app-top></app-top>
+<div class="container-fluid fundoBoard">
+  <!-- inicia o container do meio -->
+  <div class="container fundoContainer">
+    <!-- carrega o compontente/ pagina moldal task -->
+    <app-modal-task (loadTask)="loadTask()" [task]="taskUpdate" ></app-modal-task>
+    <div class="example-parent">
+      <!-- sistema de modificar o status  -->
+      <!-- classe da cada container de status-->
+      <div class="list"  *ngFor="let title of listTitle" (dragover)="onDragOver($event)" (drop)="onDrop($event)">
+        <!-- titulo do status -->
+        <div class="title" >
+          <b>{{ title }}</b>
+        </div>
+        <!-- items de dentro -->
+        <div class="items">
+          <div
+            class="example-draggable"
+            *ngFor="let item of getListItems(title)"
+            draggable="true"
+            [attr.data-id]="item.taskId"
+            (dragstart)="onDragStart($event, item.taskId)"
+            [ngClass]="{'btncor1' : title === 'Planejado','btncor2' : title === 'Em Andamento','btncor3' : title === 'Concluído'}"
+            >
+            {{ item.title }}          
+
+            <hr class="hrBoard">
+          <!-- botões ediar e deletar -->
+            <div class="d-flex justify-content-center align-items-center">
+              <button class="btn btn-B" 
+                      (click)="editTask(item)" 
+                      data-bs-target="#exampleModalToggle2" 
+                      data-bs-toggle="modal">
+                <img src="../../../assets/visualizar.png" width="45%">
+              </button>
+              <button class="btn btnLR btn-B" 
+                      (click)="editTask(item)" 
+                      data-bs-target="#exampleModalToggle1" 
+                      data-bs-toggle="modal">
+                <img src="../../../assets/atualizar.png" width="45%">
+              </button>
+              
+              <button class="btn btn-B" 
+                      data-bs-target="#exampleModalToggle3" 
+                      data-bs-toggle="modal"
+                      (click)="deleteTask(item)">
+                <img src="../../../assets/icon _trash.png">
+              </button>
+            </div> <!-- fecha botão -->
+        </div>
+      </div><!-- fecha items de dentro -->
+    </div> <!-- Fecha container de status -->
+  </div>
+</div>
+<!-- Inicia Footer -->
+<div class="text-center p-2 text-white fixed-bottom footerFundo">
+    <p>© 2023 Copyright: <a class="text-white" href="www.remindapp.com.br">re.mind</a></p>
+</div>
+<!-- fecha footer -->
+<app-lazy-load [showLoad]="showLoad"></app-lazy-load>
+</div> <!-- container-fluid -->

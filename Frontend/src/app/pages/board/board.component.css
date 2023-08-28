@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.fundoBoard {
+  background-color: #EFEBEB !important
+}
+.fundoContainer {
+  background-color: #FFF;
+}
+.container{
+  background-color: #FFF;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.example-parent {
+  color: black;
+  display: flex;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.example-draggable {
+  max-height: 150px;
+  font-weight: normal;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px;
+}
+.btnLR {
+  margin-left: 7px;
+  margin-right: 12px;
+}
+
+#fonteMenuDrop li a{
+  color: black;
+}
+.list {
+  background-color: #EFEBEB !important;
+  padding: 10px;
+  height: 360px;
+  max-width: 360px;
+  width: 340px;
+  overflow-y: auto;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.hrBoard{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btncor1{
+  background-color: rgba(248, 177, 194, 0.50) !important;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+.btncor2{
+  background-color: rgba(255, 244, 141, .8) !important;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+.btncor3{
+  background-color: rgba(124, 252, 128, .6) !important;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.footerFundo {
+  border: 1px solid rgba(0, 0, 0, 0.00);
+  background: #194D97;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+@media (max-width: 767.9px){
+  .example-parent {
+      flex-direction: column;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 0px;
+    }
+    .list {
+      padding: 10px;
+      height: 250px;
+      max-width: 350px !important;
+      width: 100%;
+      margin-left: 0px;
+      margin-right: 0px;
+     
+    }
+    .container {
+      margin-bottom: 60px;
+      border-radius: 10px; 
+    }
+  }
+    @media (max-width: 980px) {
+      .example-parent {
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0px;
+      }
+
+      .list {
+        padding: 10px;
+        height: 250px;
+        max-width: 940px !important;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+
+      }
+
+      .container {
+        margin-bottom: 60px;
+        border-radius: 10px;
+      }
+}
