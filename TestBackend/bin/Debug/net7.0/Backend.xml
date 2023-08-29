@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Backend</name>
+    </assembly>
+    <members>
+        <member name="M:Backend.Controllers.TasksController.GetOneTaskBy(System.Int32)">
+            <summary>
+            Lista tarefa pelo id, se for do usuario logado
+            </summary>
+            <param name="taskId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Backend.Controllers.TasksController.GetOneTaskByUser">
+            <summary>
+            Listar todas as tarefas do usuário logado
+            </summary>
+        </member>
+        <member name="M:Backend.Controllers.TasksController.SearchStatusTaskByUser(System.String)">
+            <summary>
+            Procurar pelo status da tarefa do usuario logado
+            </summary>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Backend.Controllers.TasksController.SearchNameTaskByUser(System.String)">
+            <summary>
+            Procurar pelo titulo da tarefa do usuario logado
+            </summary>
+            <param name="title"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Backend.Controllers.TasksController.CreateTastByUser(Backend.Models.Tasks)">
+            <summary>
+            Cria tarefa para usuário logado
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST/ Create
+                {
+                        "title": "Alteração no User 12",
+                        "description": "Remover funcionalidades extras",
+                        "status": "Planejado",
+                        "userId": 27
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Backend.Controllers.TasksController.UpdateTastByUser(System.Int32,Backend.Models.Tasks)">
+            <summary>
+            Atualiza usuário logado com titulo diferente
+            </summary>
+             /// <remarks>
+            Sample request:
+            
+                PUT/ Update
+                {
+                        "taskId": 13,
+                        "title": "Alteração no User 12",
+                        "description": "Remover funcionalidades extras",
+                        "status": "Planejado",
+                        "userId": 27
+                }
+                
+            </remarks>
+            <returns></returns>       
+        </member>
+        <member name="M:Backend.Controllers.TasksController.DeleteTaskByUser(System.Int32)">
+            <summary>
+            Deleta quando usuário estiver logado e status for planejado.
+            </summary>
+            <param name="taskId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Backend.Controllers.UsersController.GetOne">
+            <summary>
+            Informa sobre o usuário Logado
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Backend.Controllers.UsersController.Create(Backend.Models.Users)">
+            <summary>
+            Cria novo usuários sem Autenticação
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST/ Create
+                {
+                    "name": "Analia",
+                    "email": "analia.ninae@email.com",
+                    "password": "senha123"
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Backend.Controllers.UsersController.Update(Backend.Models.Users)">
+            <summary>
+            Atualiza usuário logado
+            </summary>
+            <remarks>
+            Sample request:
+            
+                PUT/ Update
+                {
+                    "userId": "",
+                    "name": "Analia",
+                    "email": "analia.ninae@email.com",
+                    "password": "senha123"
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Backend.Controllers.UsersController.Auth(Backend.Models.Users)">
+            <summary>
+            Gera Token de Autenticação
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST/ token
+                {
+                    "email": "joao@email.com",
+                    "password": "senha123"
+                }
+                
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Backend.Services.Tasks.TasksService.SearchNameTaskByUser(System.String,System.Int32)">
+            Procurar pela informação do nome referente ao usuario logado (id) OK
+        </member>
+    </members>
+</doc>

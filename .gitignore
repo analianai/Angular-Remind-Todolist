@@ -1,0 +1,12 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/Backend/bin/Debug/net7.0
+/Backend/obj/Debug/net7.0
+/Backend/obj/Debug/net7.0/Backend.assets.cache
+/Backend/.vs/Backend/config
+/Backend/.vs/Backend/DesignTimeBuild
+/Backend/.vs/Backend/FileContentIndex
+/Backend/.vs/ProjectEvaluation
+/Backend/.vs/Backend/v17/.futdcache.v2
