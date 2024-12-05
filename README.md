@@ -1,4 +1,5 @@
-# B2B Projeto Integrador Equipe 1
+# B2B Projeto Remind
+Backend: consumindo API Remind - Frontend aplicativo desenvolvido com Angular
 Anália e Geismar
 
 ### Requisitos funcionais:
